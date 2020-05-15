@@ -1,0 +1,52 @@
+@import url(https://use.fontawesome.com/releases/v5.0.13/css/all.css);
+@import url(https://fonts.googleapis.com/css?family=Montserrat&display=swap);
+.weather {
+  display: flex;
+  flex-wrap: wrap;
+  width: 300px;
+  font-family: 'Montserrat';
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  margin: 10px 0;
+}
+.weather-item {
+  width: 100%;
+}
+
+.weather-item.icon::before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  font-size: 40px;
+}
+.weather .weather-item.icon::after {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.weather.cloud .weather-item.icon::before {
+  content: '\f0c2';
+  color: #15a8fd;
+}
+.weather.sun .weather-item.icon::before {
+  content: '\f185';
+  color: #ffd000;
+}
+.weather.rain .weather-item.icon::before {
+  content: '\f0c2';
+  color: #0059a1;
+}
+
+.weather.cloud .weather-item.icon::after {
+  content: 'Облачно';
+  color: #15a8fd;
+}
+.weather.sun .weather-item.icon::after {
+  content: 'Солнечно';
+  color: #ffd000;
+}
+.weather.rain .weather-item.icon::after {
+  content: 'Дождь';
+  color: #0059a1;
+}
