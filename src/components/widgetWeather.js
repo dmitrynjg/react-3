@@ -1,6 +1,5 @@
 'use strict';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 
 class WeatherWidget extends React.Component {
@@ -20,7 +19,7 @@ class WeatherWidget extends React.Component {
   }
 }
 
-const domContainer = document.querySelector('#root');
+
 
 WeatherWidget.propTypes = {
    city: PropTypes.string.isRequired,
@@ -30,32 +29,4 @@ WeatherWidget.propTypes = {
    humidity: PropTypes.number.isRequired,
    weatherType: PropTypes.oneOf(['sun', 'rain', 'cloud']).isRequired
 };
-
-
-ReactDOM.render(
-  <React.StrictMode>
-<WeatherWidget 
-  city={'Москва'}
-  deg={18}
-  wind={4}
-  windDir={'ЮВ'}
-  humidity={71}
-  weatherType={'rain'}
-/>
-<WeatherWidget 
-  city={'Москва'}
-  deg={18}
-  wind={4}
-  windDir={'ЮВ'}
-  humidity={71}
-  weatherType={'sun'}
-/>
-<WeatherWidget 
-  city={'Москва'}
-  deg={18}
-  wind={4}
-  windDir={'ЮВ'}
-  humidity={71}
-  weatherType={'cloud'}
-/>
-</React.StrictMode>, domContainer);
+export {WeatherWidget};
